@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora UNIMINUTO</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+            background-color: #f0f0f0;
+        }
+        form {
+            display: inline-block;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+        }
+        input[type="textfield"] {
+            width: 90%;
+            padding: 10px;
+            margin-bottom: 10px;
+            font-size: 18px;
+            text-align: right;
+        }
+        input[type="button"] {
+            width: 50px;
+            height: 50px;
+            margin: 5px;
+            font-size: 18px;
+            cursor: pointer;
+        }
+        h3 {
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <form name="calculator">
+        <h3>UNIMINUTO - ESPECIALIZACION EN DESARROLLO DE SOFTWARE <a href="#">jose.villamil-a@uniminuto.edu.co</a></h3>
+        <h3>DESARROLLO DE APLICACIONES WEB <a href="#">Practica de exposicion pagina WEB</a></h3>
+        <p>CALCULADORA EN LINEA</p>
+        <input type="textfield" name="ans" value="" onkeydown="return /[0-9+\-*/]/.test(event.key)">
+        <br>
+        <input type="button" value="1" onClick="document.calculator.ans.value+='1'">
+        <input type="button" value="2" onClick="document.calculator.ans.value+='2'">
+        <input type="button" value="3" onClick="document.calculator.ans.value+='3'">
+        <input type="button" value="+" onClick="document.calculator.ans.value+='+'">
+        <br>
+        <input type="button" value="4" onClick="document.calculator.ans.value+='4'">
+        <input type="button" value="5" onClick="document.calculator.ans.value+='5'">
+        <input type="button" value="6" onClick="document.calculator.ans.value+='6'">
+        <input type="button" value="-" onClick="document.calculator.ans.value+='-'">
+        <br>
+        <input type="button" value="7" onClick="document.calculator.ans.value+='7'">
+        <input type="button" value="8" onClick="document.calculator.ans.value+='8'">
+        <input type="button" value="9" onClick="document.calculator.ans.value+='9'">
+        <input type="button" value="*" onClick="document.calculator.ans.value+='*'">
+        <br>
+        <input type="button" value="0" onClick="document.calculator.ans.value+='0'">
+        <input type="button" value="C" onClick="document.calculator.ans.value=''">
+        <input type="button" value="/" onClick="document.calculator.ans.value+='/'">
+        <input type="button" value="=" onClick="document.calculator.ans.value=eval(document.calculator.ans.value)">
+    </form>
+</body>
+</html>
